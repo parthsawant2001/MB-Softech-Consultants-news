@@ -1,0 +1,14 @@
+      <div className='newsContainer'>
+        {news.map((item, index) => {
+          return (
+            <div className='news' key={index}>
+              <Helmet>
+                <title>{item.title}</title>
+                <meta name='description' content={`${item.description}`} />
+                <link rel='canonical' href='/' />
+              </Helmet>
+              <NewsItem item={item} index={index} />
+            </div>
+          );
+        })}
+      </div>
